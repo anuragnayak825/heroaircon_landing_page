@@ -1,0 +1,82 @@
+.bubble-left::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid white;
+  border-bottom: 10px solid transparent;
+}
+
+.bubble-right::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+}
+
+@keyframes bell-ring {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-15deg); }
+  20% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  50% { transform: rotate(-6deg); }
+  60% { transform: rotate(6deg); }
+  70% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+}
+.ring-bell {
+  animation: bell-ring 1.2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.bubble-left::after,
+.bubble-right::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+}
+
+.bubble-left::after {
+  left: -20px;
+  border-right-color: white;
+}
+
+.bubble-right::after {
+  right: -20px;
+  border-left-color: white;
+}
+/* CSS for spinning animation on hover */
+.icon-spin-hover {
+  transition: transform 0.3s ease ;
+}
+
+.icon-spin:hover .icon-spin-hover {
+  transform: rotate(360deg);
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+}
+
+.call-button {
+  animation: vibrate 0.4s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+
+
