@@ -6,15 +6,60 @@
   <link rel="icon" href="/favicon.icons" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hero Aircon - Smart Cooling Solutions</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17309566429"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'AW-17309566429');
+  <!-- Event snippet for Call by clicking on a number on my website conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17309566429/hNttCM-mhYYbEN2L7L1A',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+      });
+      return false;
+    }
   </script>
+
+  <!-- Event snippet for Call by clicking on a number on my website conversion page
+
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+
+    function gtag_report_conversion(url) {
+
+      var callback = function () {
+
+        if (typeof (url) != 'undefined') {
+
+          window.location = url;
+
+        }
+
+      };
+
+      gtag('event', 'conversion', {
+
+        'send_to': 'AW-17309566429/hNttCM-mhYYbEN2L7L1A',
+
+        'value': 1.0,
+
+        'currency': 'INR',
+
+        'event_callback': callback
+
+      });
+
+      return false;
+
+    }
+  </script>
+
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NX2M4NKY4"></script>

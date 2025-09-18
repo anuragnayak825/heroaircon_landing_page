@@ -1,19 +1,27 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet"; // ✅ Add this
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import StickyHeader from "./StickyHeader";
 import Footer from "./Footer";
-// import thankYouSound from "./assets/sounds/thankyou.mp3"; // ✅ add your sound here
 
 export default function ThankYouCard() {
     useEffect(() => {
-        window.gtag('event', 'conversion', {send_to: 'AW-17309566429/zZN4CLOs--0aEN2L7L1A'});
+        window.gtag('event', 'conversion', { send_to: 'AW-17309566429/zZN4CLOs--0aEN2L7L1A' });
     }, []);
+
     return (
         <>
+            {/* ✅ Script in <head> */}
+            <Helmet>
+                <script>
+                    {`gtag('event', 'conversion', {'send_to': 'AW-17309566429/zZN4CLOs--0aEN2L7L1A'});`}
+                </script>
+            </Helmet>
+
             <StickyHeader />
-            <div className="w-full fixed z-50  min-h-screen flex items-center justify-center bg-green-100 p-6">
+            <div className="w-full fixed z-50 min-h-screen flex items-center justify-center bg-green-100 p-6">
                 <div className="bg-white max-w-xl w-full rounded-3xl shadow-xl px-8 py-12 text-center flex flex-col justify-center items-center">
                     {/* ✅ Animated Check Icon */}
                     <motion.div
@@ -42,7 +50,7 @@ export default function ThankYouCard() {
                         className="bg-green-500 flex justify-center items-center hover:bg-green-600 text-white font-medium px-6 py-3 rounded-md transition-all duration-300"
                         onClick={() => { window.history.back() }}
                     >
-                        <FaArrowLeftLong className="mr-3" />  Go Back
+                        <FaArrowLeftLong className="mr-3" /> Go Back
                     </button>
                 </div>
             </div>

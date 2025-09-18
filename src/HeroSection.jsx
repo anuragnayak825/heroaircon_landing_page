@@ -10,7 +10,7 @@ export default function HeroSection() {
     <div
       className="w-full min-h-[75vh] bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-10 md:py-20 gap-10"
       style={{
-        backgroundImage: `linear-gradient(rgba(40,50,102,0.85), rgba(40,50,102,0.85)), url(${Hero_Section_img})`,
+        backgroundImage: `linear-gradient(rgba(40, 50, 102, 0.85), rgba(40,50,102,0.85)), url(${Hero_Section_img})`,
       }}
     >
       {/* 📄 Left Content */}
